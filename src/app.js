@@ -8,6 +8,7 @@ import morgan from "morgan";
 import MongoStore from "connect-mongo";
 import { dirname, join } from "path";
 import path from 'path'; // Agrega esta línea
+export const PORT = process.env.PORT || 4000; // o cualquier puerto que prefieras
 
 
 import { fileURLToPath } from "url";
