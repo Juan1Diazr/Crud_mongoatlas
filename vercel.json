@@ -1,15 +1,17 @@
 
 
 {
-  "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.9.0",
-    "dotenv": "^8.2.0",
-    "pdfmake": "^0.2.15",
-    "nodemon": "^2.0.7"
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/index.js"
+    }
+  ]
 }
